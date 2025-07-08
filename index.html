@@ -278,6 +278,53 @@
             margin-bottom: 0.25rem;
         }
 
+        /* Achievements Section */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+            margin-top: 2rem;
+        }
+
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: clamp(1.5rem, 3vw, 2rem);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .achievement-card h3 {
+            color: #D4A853;
+            margin-bottom: 1rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        }
+
+        .achievement-card .issuer {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .achievement-card .description {
+            color: #d0d0d0;
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+
         /* Projects Section */
         .projects-grid {
             display: grid;
@@ -495,6 +542,10 @@
             .projects-grid {
                 grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             }
+
+            .achievements-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
         }
     </style>
 </head>
@@ -509,6 +560,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
+            <li><a href="#achievements">Achievements</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -614,6 +666,58 @@
         </div>
     </section>
 
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <h2>Achievements & Certifications</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <h3>Certificate of Tenure Completion</h3>
+                <div class="issuer">AI Club, VIT Bhopal</div>
+                <div class="description">Recognition for successful completion of tenure as Core Team Member, PR & Outreach Team member</div>
+            </div>
+            <div class="achievement-card">
+                <h3>Python Essentials Certificate</h3>
+                <div class="issuer">VITyarthi</div>
+                <div class="description">Advanced Python programming certification from VIT's specialized curriculum</div>
+            </div>
+            <div class="achievement-card">
+                <h3>The Complete Python Programming Course (The Codex)</h3>
+                <div class="issuer">Udemy</div>
+                <div class="description">Comprehensive Python course covering from basics to advanced concepts including web development and data science</div>
+            </div>
+            <div class="achievement-card">
+                <h3>Introduction to AI & ML</h3>
+                <div class="issuer">VITyarthi</div>
+                <div class="description">Certification in Artificial Intelligence and Machine Learning from VIT's specialized program</div>
+            </div>
+            <div class="achievement-card">
+                <h3>Introduction to Machine Learning</h3>
+                <div class="issuer">NPTEL</div>
+                <div class="description">Foundational course covering ML algorithms, data preprocessing, and model evaluation techniques</div>
+            </div>
+            <div class="achievement-card">
+                <h3>Python Programming Internship</h3>
+                <div class="issuer"></div>
+                <div class="description">Comprehensive Python programming internship with hands-on projects and real-world applications</div>
+            </div>
+            <div class="achievement-card">
+                <h3>C++ Internship Certificate</h3>
+                <div class="issuer"></div>
+                <div class="description">Completed intensive C++ programming internship focusing on advanced concepts and practical applications</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); margin-bottom: 1rem; color: #667eea;">View all certificates and achievements:</p>
+            <a href="https://drive.google.com/drive/folders/1fpJfObz8qI_Ig6hoMKddhJaXNvDw6y9O?usp=sharing" class="google-form-button" target="_blank" style="font-size: clamp(0.9rem, 2.5vw, 1.1rem); padding: 1.2rem 2.5rem;">
+                📂 View Achievements Drive
+            </a>
+            <p style="font-size: clamp(0.8rem, 2vw, 0.9rem); color: #b8b8b8; margin-top: 1rem;">
+                Access all certificates and detailed achievement documentation
+            </p>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="section">
         <h2>Featured Project</h2>
@@ -626,7 +730,7 @@
                     <span class="tech-tag">CSS</span>
                     <span class="tech-tag">JavaScript</span>
                 </div>
-                <a href="#" class="github-button">GitHub</a>
+                <a href="https://github.com/AaryaShrivaastava/VoiceBack/" class="github-button">GitHub</a>
             </div>
         </div>
     </section>
